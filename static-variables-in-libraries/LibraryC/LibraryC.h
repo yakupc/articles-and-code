@@ -3,5 +3,6 @@
 #include "LibraryCGlobal.h"
 
 // Static variable declaration
-static int STATIC_VAR = 15;
+LIBC_API int func();
 
+static int STATIC_VAR = 15;
