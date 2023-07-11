@@ -1,0 +1,98 @@
+Language: Cpp
+BasedOnStyle:  Mozilla
+
+AlignConsecutiveAssignments: true
+AlignConsecutiveDeclarations: true
+AlignConsecutiveMacros: true
+AlignTrailingComments: true
+AlignEscapedNewlines: Right
+AlignAfterOpenBracket: Align
+AlignConsecutiveBitFields : true
+AlignOperands: true
+
+#QualifierOrder: ['inline', 'static', 'type', 'const', 'volatile' ]
+#SeparateDefinitionBlocks : Always
+
+DerivePointerAlignment: false
+PointerAlignment: Right
+ReferenceAlignment : Right
+#QualifierAlignment : Left
+
+AccessModifierOffset: -4
+
+AllowShortBlocksOnASingleLine: false
+AllowShortFunctionsOnASingleLine: Inline
+AllowShortIfStatementsOnASingleLine: true
+AlwaysBreakAfterDefinitionReturnType: None
+AlwaysBreakAfterReturnType: None
+AlwaysBreakBeforeMultilineStrings: false
+BinPackArguments: false
+BinPackParameters: false
+
+BreakBeforeBraces: Custom
+BraceWrapping:
+  AfterClass: true
+  AfterControlStatement: true
+  AfterEnum: true
+  AfterFunction: true
+  AfterNamespace: true
+  AfterObjCDeclaration: true
+  AfterStruct: true
+  AfterUnion: true
+  AfterCaseLabel: false
+  BeforeCatch: true
+  BeforeElse: true
+  BeforeWhile: true 
+  BeforeLambdaBody: false
+  IndentBraces: false
+  SplitEmptyFunction: false
+  SplitEmptyRecord: false
+  SplitEmptyNamespace: false
+
+ContinuationIndentWidth: 4
+ConstructorInitializerIndentWidth: 4
+ConstructorInitializerAllOnOneLineOrOnePerLine: true
+ColumnLimit: 0
+Cpp11BracedListStyle: true
+IndentWidth: 4
+IndentAccessModifiers: false
+IndentCaseLabels: true
+IndentCaseBlocks: true
+IndentExternBlock: true
+IndentGotoLabels: true
+IndentPPDirectives: BeforeHash
+#IndentRequiresClause: false
+NamespaceIndentation: All
+# KeepEmptyLinesAtTheStartOfBlocks: false
+MaxEmptyLinesToKeep: 1
+ReflowComments: false
+PenaltyBreakBeforeFirstCallParameter: 100000
+PenaltyBreakComment: 100000
+SortIncludes: false
+SpaceAfterTemplateKeyword: false
+# Standard: Cpp11 # Broken
+UseTab: Never
+
+SpaceBeforeAssignmentOperators: true
+SpaceBeforeInheritanceColon : true
+SpaceBeforeCtorInitializerColon: true
+SpaceBeforeParens: ControlStatements
+SpaceBeforeSquareBrackets: false
+SpaceInEmptyBlock : true
+SpacesInConditionalStatement: true
+SpaceBeforeCpp11BracedList: true
+SpaceBeforeRangeBasedForLoopColon: true
+# SpacesBeforeTrailingComments: true
+SpacesInCStyleCastParentheses: false
+
+AlwaysBreakTemplateDeclarations: Yes
+AllowAllArgumentsOnNextLine: true
+
+BreakConstructorInitializers: BeforeColon
+BreakInheritanceList: AfterComma
+FixNamespaceComments: true
+CompactNamespaces: true
+
+StatementAttributeLikeMacros: [emit]
+
+# NamespaceMacros : ['BEGIN_NAMESPACE']
