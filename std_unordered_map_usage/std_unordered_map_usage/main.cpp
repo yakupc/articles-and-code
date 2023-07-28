@@ -7,8 +7,7 @@
 
 #include "ScopeTimer.h"
 
-constexpr char STR_PREFIX[]         = "1:3001:";
-constexpr int  MAP_SEARCH_ITEM_SIZE = 10000;
+constexpr char STR_PREFIX[] = "1:3001:";
 
 template<template<typename...> class Container>
 class MapBenchmark
@@ -37,10 +36,10 @@ private:
     double InsertKeys(const std::vector<std::string> &mapKeyList)
     {
         ScopeTimer scopeTimer;
-        for ( int i = 0; i < mapKeyList.size(); ++i )
+        int        value = 0;
+        for ( const auto &key : mapKeyList )
         {
-            std::string key = mapKeyList[i];
-            stringMap[key]  = i;
+            stringMap[key] = ++value;
         }
         scopeTimer.end();
         return scopeTimer.duration();
@@ -49,15 +48,18 @@ private:
     double MeasureSearch(const std::vector<std::string> &randomSearchList)
     {
         ScopeTimer scopeTimer;
+         
         for ( const std::string &stringKey : randomSearchList )
         {
             auto stringIter = stringMap.find(stringKey);
             if ( stringIter == stringMap.end() )
             {
+                // This is just make sure all search items are found in the map. There should not be any message on the console.
                 std::cout << "string not found!" << std::endl;
             }
             else
             {
+                // Commented out to avoid unnecessary output
                 //std::cout << "string found!" << std::endl;
             }
         }
@@ -71,6 +73,7 @@ private:
 
 void GenerateOrderedKeyList(const int mapSize, std::vector<std::string> &keyList)
 {
+    keyList.reserve(mapSize);
     for ( int i = 0; i < mapSize; ++i )
     {
         std::string mapKey = STR_PREFIX + std::to_string(i);
@@ -81,7 +84,7 @@ void GenerateOrderedKeyList(const int mapSize, std::vector<std::string> &keyList
 void GenerateUnorderedKeyList(const int mapSize, std::vector<std::string> &keyList)
 {
     std::vector<int> pattern = {2, 1, 4, 3};
-
+    keyList.reserve(mapSize);
     for ( int i = 0; i < mapSize; ++i )
     {
         int         patternIndex = i % pattern.size();
@@ -93,10 +96,15 @@ void GenerateUnorderedKeyList(const int mapSize, std::vector<std::string> &keyLi
 
 void GenerateSearchItemList(const int mapSize, const int mapSearchItemSize, std::vector<std::string> &keyList, std::vector<std::string> &searchKeyList)
 {
-    for ( int i = 0; i < keyList.size(); i++ )
+    std::random_device rd;
+    std::mt19937 gen(rd());
+    std::uniform_int_distribution<int> dist(0, mapSize - 1);
+
+    searchKeyList.reserve(mapSearchItemSize);
+    for (int i = 0; i < mapSearchItemSize; i++)
     {
-        int         random_index = std::rand() % (keyList.size());
-        std::string searchKey    = keyList[random_index];
+        int random_index = dist(gen);
+        std::string searchKey = keyList[random_index];
         searchKeyList.push_back(searchKey);
     }
 }
