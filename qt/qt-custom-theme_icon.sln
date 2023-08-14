@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.33919.361
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "qt-custom-theme_icon", "qt-custom-theme_icon\qt-custom-theme_icon.vcxproj", "{266636AD-6E08-41C6-ABEE-688452BEAC29}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{266636AD-6E08-41C6-ABEE-688452BEAC29}.Debug|x64.ActiveCfg = Debug|x64
+		{266636AD-6E08-41C6-ABEE-688452BEAC29}.Debug|x64.Build.0 = Debug|x64
+		{266636AD-6E08-41C6-ABEE-688452BEAC29}.Release|x64.ActiveCfg = Release|x64
+		{266636AD-6E08-41C6-ABEE-688452BEAC29}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6650977C-6393-47A6-9BF4-3965BB0614B4}
+	EndGlobalSection
+EndGlobal

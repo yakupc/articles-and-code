@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/">
+        <file>icons/dark/index.theme</file>
+        <file>icons/light/index.theme</file>
+        <file>icons/light/svg/check.svg</file>
+        <file>icons/light/png/check.png</file>
+        <file>icons/light/png/cancel.png</file>
+        <file>icons/dark/png/check.png</file>
+        <file>icons/dark/png/cancel.png</file>
+        <file>icons/dark/svg/check.svg</file>
+    </qresource>
+</RCC>
