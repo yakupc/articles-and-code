@@ -1,4 +1,3 @@
-// MyDynamicLibrary.cpp
 #include "pch.h"
 #include <iostream>
 #include "LibraryDynamic.h"

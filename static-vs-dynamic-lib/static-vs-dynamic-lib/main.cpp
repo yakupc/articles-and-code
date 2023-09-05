@@ -16,5 +16,5 @@ int main()
     // Calling functions from the dynamic library
     DisplayMessageDynamic();
     int squaredDynamic = SquareDynamic(number);
-    std::cout << "The square of " << number << " is " << squaredStatic << std::endl;
+    std::cout << "The square of " << number << " is " << squaredDynamic << std::endl;
 }
